@@ -1,40 +1,58 @@
 # vue-stationery-v2
 
-This template should help get you started developing with Vue 3 in Vite.
+vue-stationery-v2 - пет проект, результат моего изучения фреймворка Vue.js во время работы в компании Мастерторг. Проект представляет собой реализацию фронтенд части приложения по продаже товаров различных категорий. За основу референса для дизайна взят сайт samokat.ru. 
 
-## Recommended IDE Setup
+Основные библиотеки и инструменты:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Pinia - как стейт менеджер
 
-## Type Support for `.vue` Imports in TS
+- yandex-maps - изучал работу с яндекс картами, решил применить и в пет проекте
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Axios - для отправки и обработки запросов на сервер
 
-## Customize configuration
+- Tailwind - для упрощенной работы с стилями
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- vue-router - для роутинга
 
-## Project Setup
+- typescript
 
-```sh
-npm install
-```
+- Mokky.dev для хранения тестовых данных и взаимодействия API
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
+Основыне реализованные фичи в приложении:
 
-```sh
-npm run build
-```
+- [ ] Логин\регистрация акканута юзера
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+- [ ] Категории товаров
 
-```sh
-npm run test:unit
-```
+- [ ] Список товаров
+
+- [ ] Выбор адреса доставки с помощью карт
+
+- [ ] Закладки с товарами, понравившимися юзеру
+
+- [ ] Страница товара с его описанием
+
+- [ ] Поиск по товарам на сайте
+
+- [ ] Корзина товаров
+
+- [ ] Оформление заказа
+
+- [ ] Страница с оформленными заказами юзера
+
+- [ ] Оплата с помощью UKassa
+
+
+
+Параллельно с данным пет-проектом, я разрабатывал редизайн текущего сайта компании - mt.delivery, под руководством старшего разработчика. Текущий проект очень похож с тем, над которым я работал в компании, но значительно упрощен.
+
+
+
+За время обучения был изучен сам фреймворк Vue, работа с Яндекс картами, способ проектирования называемый "" и юнит тестирование с помощью.
+
+
+
+Описание структуры проекта:
 # vue-stationery-v2
