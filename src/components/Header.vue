@@ -1,25 +1,18 @@
 <script setup lang='ts'>
-
 </script>
 
 
 <template>
-    <header class="flex justify-between z-10 bg-white rounded-xl shadow-lg px-10 py-6">
+    <header class="flex justify-between z-10 bg-white rounded-xl shadow-lg px-6 py-4">
         <router-link to="/">
             <div class="flex items-center gap-4">
                 <img src="/logo.png" alt="Логотип" class="w-10"/>
                 <div>
-                    <h2 class="text-xl font-bold uppercase">Vue Stationery</h2>
-                    <p class="text-slate-400">Лучший магазин канцтоваров</p>
+                    <h2 class="text-lg font-bold uppercase">Vue Stationery</h2>
+                    <p class="text-slate-400 text-xs">Лучший магазин канцтоваров</p>
                 </div>
             </div>
         </router-link>
-
-        <button class="w-8 h-8 bg-l">Укажите адрес доставки</button>
-
-        <div class="flex p-1 rounded-lg border border-solid border-green-300">
-            <input placeholder="Поиск товаров..."/>
-        </div>
 
         <ul class="text-black flex items-center gap-4">
             <router-link to="/favorites">

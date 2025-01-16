@@ -28,5 +28,6 @@
 }
 
 body {
-  background-color: rgb(247 254 231);
+  background-color: rgb(242, 242, 242);
+  font-size: 14px !important;
 }
