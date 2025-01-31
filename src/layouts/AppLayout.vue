@@ -23,7 +23,7 @@ provide('closeDrawer', closeDrawer)
   <div class="flex flex-col rounded-xl mx-24">
     <Header @open-drawer="openDrawer"></Header>
 
-    <div class="flex">
+    <div class="flex bg-white p-4 mt-4 rounded-lg">
       <router-view></router-view>
     </div>
   </div>
