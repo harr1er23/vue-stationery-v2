@@ -4,5 +4,5 @@
 
 
 <template>
-    <div>Category 1</div>
+    <div></div>
 </template>
