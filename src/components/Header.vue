@@ -10,7 +10,7 @@ const emit = defineEmits(['openDrawer'])
                 <img src="/logo.png" alt="Логотип" class="w-10"/>
                 <div>
                     <h2 class="text-lg font-bold uppercase">Vue Stationery</h2>
-                    <p class="text-slate-400 text-xs">Лучший магазин канцтоваров</p>
+                    <p class="text-slate-400 text-xs">Лучший магазин товаров</p>
                 </div>
             </div>
         </router-link>
