@@ -1,12 +1,14 @@
-import type { AxiosInstance } from "axios";
-import ApiService from "@/core/network/services/ApiService";
 import CategoryModel from "../models/CategoryModel";
+import axiosInstance from "@/core/network/axiosInstance";
 
-export default class CategoriesApiService extends ApiService {
-    constructor(axios:AxiosInstance){ super(axios); }
+export default class CategoriesApiService {
     async getCategories(): Promise<CategoryModel[]> {
-        const resp = await this.axios.get('/Api/getMenuItems');
+        const resp = await axiosInstance.get(`${import.meta.env.VITE_MOKKY_URL}/categories`);
 
-        return resp.data.map((category: any) => new CategoryModel(category));
+        if(resp.status === 200) {
+            return resp.data.map((category: any) => new CategoryModel(category));
+        }else {
+            throw Error('Не удалось получить категории!')
+        }
     }
 }

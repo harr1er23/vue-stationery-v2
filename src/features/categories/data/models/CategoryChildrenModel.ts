@@ -9,6 +9,6 @@ export default class CategoryChildrenModel extends CategoryChildren {
         super();
         this.id = data.id;
         this.title = data.title;
-        this.image = data.image;
+        this.image = data.image_small;
     }
 }
