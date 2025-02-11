@@ -3,6 +3,9 @@ const emit = defineEmits<{
     increase: [],
     decrease: []
     input: [event: Event]
+    'input-count': [count: number]
+    'change-count': [count: number]
+    change: [event: Event]
 }>(); 
 
 defineProps<{
@@ -11,26 +14,35 @@ defineProps<{
     max?: number;
 }>();
 
-function onIncrease(){
-
+function onIncrease() {
+    emit('increase');
 }
 
 function onDecrease() {
-
+    emit('decrease')
 }
 
-function onInput() {
-
+function onInput(e: Event) {
+    if(e.currentTarget instanceof HTMLInputElement) {
+        const validValue = Number(e.currentTarget.value);
+        e.currentTarget.value = validValue ? validValue.toString() : "";
+        emit('input-count', validValue);
+    }
 }
 
-function onChange() {
-
+function onChange(e: Event) {
+    if(e.currentTarget instanceof HTMLInputElement) {
+        const validValue = Number(e.currentTarget.value);
+        e.currentTarget.value = validValue ? validValue.toString() : "";
+        emit('change-count', validValue);
+    }
 }
 </script>
 
 <template>
     <div class="card overflow-hidden p-2 text-white rounded-full w-max relative">
         <button
+            @click="onIncrease"
             :class="{ 'opacity-0 pointer-events-none':count }"
             class="text-current font-extrabold text-2xl leading-3 absolute left-0 top-0 w-full h-full transition-all"
         >+</button>
@@ -47,7 +59,9 @@ function onChange() {
                 :value="count || ''"
                 @input="onInput"
                 @change="onChange"/>
-            <button>+</button>
+            <button 
+                class="text-current font-extrabold text-2xl leading-3"
+                @click="onIncrease">+</button>
         </div>
     </div>
 </template>

@@ -13,11 +13,14 @@ defineProps<{
 <template>
     <button
         :type="type ?? 'button'"
-        class="flex items-center py-1 px-3 rounded-lg text-base text-white hover:bg-transparent"
+        class="flex justify-center rounded-lg text-base py-1 px-3 text-white hover:bg-transparent"
         :disabled="disabled">
-        <slot v-if="!loading"></slot>
-        <loader v-else class="w-6 h-6 mx-6"/>
         <slot name="ico"></slot>
+        <div class="flex flex-col">
+            <slot v-if="!loading"></slot>
+            <loader v-else class="w-6 h-6 mx-6"/>
+            <slot name="subtitle"></slot>
+        </div>
     </button>    
 </template>
 

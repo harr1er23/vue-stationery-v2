@@ -1,10 +1,14 @@
 <script setup lang='ts'>
+import Search from '@/features/search/presentation/Search.vue';
+import AppButton from './ui/app-button.vue';
+import LocationIco from './icons/LocationIco.vue';
+
 const emit = defineEmits(['openDrawer'])
 </script>
 
 
 <template>
-    <header class="flex justify-between z-10 bg-white rounded-xl px-6 py-4">
+    <header class="flex gap-3 justify-between z-10 bg-white rounded-xl px-6 py-4">
         <router-link to="/">
             <div class="flex items-center gap-4">
                 <img src="/logo.png" alt="Логотип" class="w-10"/>
@@ -14,6 +18,17 @@ const emit = defineEmits(['openDrawer'])
                 </div>
             </div>
         </router-link>
+
+        <AppButton class="btn rounded-full items-center">
+            <template #default>
+                <spna>Адрес доставки</spna>
+            </template>
+            <template #ico>
+                <LocationIco class="w-6 btn-hover:fill-current" />
+            </template>
+        </AppButton>
+
+        <Search />
 
         <ul class="text-black flex items-center gap-4">
             <router-link to="/favorites">

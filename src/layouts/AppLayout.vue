@@ -2,7 +2,7 @@
 import { provide, ref } from 'vue'
 
 import Header from '@/components/Header.vue';
-import Drawer from '@/components/Drawer.vue';
+import Drawer from '@/features/cart/presentation/Drawer.vue';
 import Footer from '@/components/Footer.vue';
 
 
